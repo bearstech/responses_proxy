@@ -35,7 +35,7 @@ Then run some code to make some requests::
 
     python -c "import requests; requests.get('http://bearstech.com')"
 
-This will generate some file in `document_root/`
+This will generate some file in `tests/responses/`
 
 You can now restart the server without the proxy mode and the client will react
 the same way without calling the real server.
