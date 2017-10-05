@@ -2,6 +2,9 @@
 responses proxy
 ===================
 
+.. image:: https://travis-ci.org/bearstech/responses_proxy.png?branch=master
+  :target: https://travis-ci.org/bearstech/responses_proxy
+
 responses_proxy allow you to easily mock HTTP responses in your tests
 
 Installation
