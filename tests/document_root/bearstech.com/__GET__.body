@@ -1,0 +1,552 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/bearstech.min.css">
+  <link rel="icon" href="/static/img/favicon.ico" />
+  <link rel="alternate" type="application/rss+xml"  title="RSS feed blog de Bearstech" href="/atom_feed.xml" />
+  <title>Bearstech | Hébergement &amp; Infogérance, conseil DevOps</title>
+  <meta name="description" content="Bearstech est une société coopérative d’ingénieurs spécialisée en infogérance, hébergement, le conseil devops et l&#39;audit sécurité"/>
+  <meta name="keywords" content="Prestataire hébergement, Infogérance, Devops, performance, sécurité "/>
+  <link rel="canonical" href="https://bearstech.com/"/>
+  <link rel="prefetch" href="https://bearstech.com/static/img/logo.png"/>
+  <link rel="dns-prefetch" href="https://bearstech.com/">
+  <meta name="robots" content="index,follow"/>
+  <meta name="theme-color" content="#0d3044">
+  <meta name="geo.placename" content="Paris"/>
+  <meta name="publisher" content="Bearstech"/>
+  <meta name="distribution" content="global"/>
+  <meta name="copyright" content="Bearstech"/>
+  <meta property="og:title" content="Bearstech | Hébergement &amp; Infogérance, conseil DevOps"/>
+  <meta property="og:image" content="https://bearstech.com/static/img/logo.png"/>
+  <meta property="og:description" content="Bearstech est une société coopérative d’ingénieurs spécialisée en infogérance, hébergement, le conseil devops et l&#39;audit sécurité"/>
+  <meta property="og:url" content="https://bearstech.com/"/>
+  <meta property="og:site_name" content="Bearstech | Coopérative d'ingénieurs expert en hébergement et infogérance"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@bearstech"/>
+  <meta name="twitter:title" content="Bearstech | Hébergement &amp; Infogérance, conseil DevOps"/>
+  <meta name="twitter:description" content="Bearstech est une société coopérative d’ingénieurs spécialisée en infogérance, hébergement, le conseil devops et l&#39;audit sécurité"/>
+  <meta name="twitter:image" content="https://bearstech.com/static/img/logo.png"/>
+</head>
+<body>
+  <div itemscope itemtype="https://schema.org/WebPage" id="/">
+    <meta itemprop="name" content="Bearstech | Hébergement &amp; Infogérance, conseil DevOps"/>
+    <meta itemprop="description" content="Bearstech est une société coopérative d’ingénieurs spécialisée en infogérance, hébergement, le conseil devops et l&#39;audit sécurité"/>
+    <meta itemprop="publisher" content="Bearstech"/>
+    <meta itemprop="primaryImageOfPage" content="/static/img/logo.svg"/>
+    <meta itemprop="url" content="https://bearstech.com/"/>
+    <div id="app">
+      <div id="le-nav" class="is-on-top">
+        <nav id="nav-mobile" class="is-visible-mobile is-mobile">
+          <div class="nav-left">
+            <a class="nav-item nav-logo" href="/"><img class="logo" alt="Bearstech" src="/static/img/logo.svg" /></a>
+          </div>
+          <div class="nav-right is-flex has-vertical-center">
+            <span class="nav-item nav-hamburger" v-on:click="toggle('mobile-menu')">
+              <span class="hamburger-bread"></span>
+              <span class="hamburger-bread"></span>
+              <span class="hamburger-bread"></span>
+            </span>
+          </div>
+        </nav>
+        <nav id="nav-top" class="nav  is-hidden-mobile">
+          <div class="container">
+            <div class="nav-right">
+              <a class="nav-item is-tab" href="https://support.bearstech.com">Support</a>
+              <span class="separator">&nbsp;</span>
+              <a class="nav-item is-tab" href="/intervention-durgence/">Intervention d'Urgence</a>
+              <span class="separator">&nbsp;</span>
+              <a class="nav-item is-tab" href="/contact/">Contact</a>
+            </div>
+          </div>
+        </nav>
+        <nav id="nav-main" class="nav is-hidden-mobile">
+          <div class="container">
+            <div class="nav-left">
+              <a class="nav-item" href="/"><img class="logo" alt="Bearstech" src="/static/img/logo.svg" /></a>
+            </div>
+            <ul class="nav-right">
+              <li class="nav-item is-tab"><a href="/devops">Devops</a>
+                <ul>
+                  <li class=""><a href="/devops/#Formations">Formations</a></li>
+                  <li class=""><a href="/devops/#Intégration Continue">Intégration Continue</a></li>
+                  <li class=""><a href="/devops/#Métrologie et Supervision">Métrologie et Supervision</a></li>
+                  <li class=""><a href="/devops/#Transformation et Accompagnement">Transformation et Accompagnement</a></li>
+                  <li><a href="/outils-devops/">Outils DevOps</a></li>
+                </ul>
+              </li>
+              <li class="nav-item is-tab"><a href="/performance">Performance</a>
+                <ul>
+                  <li class=""><a href="/performance/#Audits et Tests de Charge">Audits et Tests de Charge</a></li>
+                  <li class=""><a href="/performance/#Développement et TMA">Développement et TMA</a></li>
+                  <li class=""><a href="/performance/#Expertise CDN">Expertise CDN</a></li>
+                  <li class=""><a href="/performance/#Hébergement résilient">Hébergement résilient</a></li>
+                  <li class=""><a href="/performance/#Optimisation Serveurs">Optimisation Serveurs</a></li>
+                </ul>
+              </li>
+              <li class="nav-item is-tab"><a href="/securite">Sécurité</a>
+                <ul>
+                  <li class=""><a href="/securite/#Audits de sécurité LAMP">Audits de sécurité LAMP</a></li>
+                  <li class=""><a href="/securite/#Bonnes pratiques">Bonnes pratiques</a></li>
+                  <li class=""><a href="/securite/#DDoS Mitigation">DDoS Mitigation</a></li>
+                  <li class=""><a href="/securite/#Plan de reprise d&#39;activité">Plan de reprise d&#39;activité</a></li>
+                </ul>
+              </li>
+              <li class="nav-item is-tab"><a href="/expertise-cloud">Expertise Cloud</a>
+                <ul>
+                  <li class=""><a href="/expertise-cloud/#Conseil et Architecture">Conseil et Architecture</a></li>
+                  <li class=""><a href="/expertise-cloud/#Conteneurisation">Conteneurisation</a></li>
+                  <li class=""><a href="/expertise-cloud/#Exploitation">Exploitation</a></li>
+                  <li class=""><a href="/expertise-cloud/#Migration Cloud">Migration Cloud</a></li>
+                </ul>
+              </li>
+              <li class="nav-item is-tab"><a href="/societe">Société</a>
+                <ul>
+                  <li><a href="/societe/#News - Blog">News - Blog</a></li>
+                  <li><a href="/societe/#Logiciel libre">Logiciel libre</a></li>
+                  <li><a href="/societe/#Partenaires">Partenaires</a></li>
+                  <li><a href="/societe/#Reférences">Reférences</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div id="mobile-menu" class="nav-right is-hidden has-fade">
+        <div class="menu-background"></div>
+        <span class="close" v-on:click="toggle('mobile-menu')"></span>
+        <nav id="mobile-nav">
+          <ul id="mobile-menu-root" class="is-active mobile-supmenu">
+            <li><a href="/">Accueil</a></li>
+            <li class="" v-on:click="menuGoDown('devops-submenu', $event)"><a href="/devops">Devops</a></li>
+            <li class="" v-on:click="menuGoDown('performance-submenu', $event)"><a href="/performance">Performance</a></li>
+            <li class="" v-on:click="menuGoDown('securite-submenu', $event)"><a href="/securite">Sécurité</a></li>
+            <li class="" v-on:click="menuGoDown('expertise-submenu', $event)"><a href="/expertise-cloud">Expertise Cloud</a></li>
+            <li class="" v-on:click="menuGoDown('societe-submenu', $event)"><a href="/societe">Société</a></li>
+          </ul>
+          <ul id="devops-submenu" class="mobile-submenu">
+            <li class="chevron left" v-on:click="menuGoUp('mobile-menu-root', $event)">Retour</li>
+            <li class=""><a href="/devops/formations/">Formations</a></li>
+            <li class=""><a href="/devops/integration-continue/">Intégration Continue</a></li>
+            <li class=""><a href="/devops/metrologie-et-supervision/">Métrologie et Supervision</a></li>
+            <li class=""><a href="/devops/transformation-et-accompagnement/">Transformation et Accompagnement</a></li>
+          </ul>
+          <ul id="performance-submenu" class="mobile-submenu">
+            <li class="chevron left" v-on:click="menuGoUp('mobile-menu-root', $event)">Retour</li>
+            <li class=""><a href="/performance/audits-tests-de-charge/">Audits et Tests de Charge</a></li>
+            <li class=""><a href="/performance/developpement-et-tma/">Développement et TMA</a></li>
+            <li class=""><a href="/performance/expertise-cdn/">Expertise CDN</a></li>
+            <li class=""><a href="/performance/hebergement-resilient/">Hébergement résilient</a></li>
+            <li class=""><a href="/performance/optimisation-serveurs/">Optimisation Serveurs</a></li>
+          </ul>
+          <ul id="securite-submenu" class="mobile-submenu">
+            <li class="chevron left" v-on:click="menuGoUp('mobile-menu-root', $event)">Retour</li>
+            <li class=""><a href="/securite/audits-lamp/">Audits de sécurité LAMP</a></li>
+            <li class=""><a href="/securite/bonnes-pratiques/">Bonnes pratiques</a></li>
+            <li class=""><a href="/securite/ddos-mitigation/">DDoS Mitigation</a></li>
+            <li class=""><a href="/securite/plan-de-reprise-dactivite/">Plan de reprise d&#39;activité</a></li>
+          </ul>
+          <ul id="expertise-submenu" class="mobile-submenu">
+            <li class="chevron left" v-on:click="menuGoUp('mobile-menu-root', $event)">Retour</li>
+            <li class=""><a href="/expertise-cloud/conseil-et-architecture/">Conseil et Architecture</a></li>
+            <li class=""><a href="/expertise-cloud/conteneurisation/">Conteneurisation</a></li>
+            <li class=""><a href="/expertise-cloud/exploitation/">Exploitation</a></li>
+            <li class=""><a href="/expertise-cloud/migration-cloud/">Migration Cloud</a></li>
+          </ul>
+          <ul id="societe-submenu" class="mobile-submenu">
+            <li class="chevron left" v-on:click="menuGoUp('mobile-menu-root', $event)">Retour</li>
+            <li class=""><a href="/societe/blog/">News - Blog</a></li>
+            <li class=""><a href="/societe/logiciel-libre/">Logiciel libre</a></li>
+            <li class=""><a href="/societe/partenaires/">Partenaires</a></li>
+            <li class=""><a href="/societe/references/">Reférences</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page" itemprop="mainContentOfPage">
+<section id="le-hero" class="section">
+  <div class="container">
+    <div class=columns>
+      <div class="column has-align-bottom"><img class="illustration" alt="Illustration" src="/static/img/schema-hero.svg" /></div>
+      <div class="column has-vertical-center">
+        <div>
+          <h1 class="title is-2">Hébergement et Infogérance libres depuis 2004</h1>
+          <p>Bearstech est une société coopérative d’ingénieurs spécialisée, votre prestataire hébergement &amp; infogérance et le développement d&#39;applications complexes.</p>
+          <a class="button button-white has-margin-bottom" href="/configuration-hebergement/">Calculez vos besoins en ressources matérielles</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="le-blog" class="section section-grey">
+  <div class="container">
+    <div class="content is-clearfix">
+      <h2 class="title">Blog</h2>
+      <div class="columns">
+        <div class="column">
+          <div class='blog-post' itemprop="citation" itemscope itemtype="https://schema.org/Article">
+            <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="https://bearstech.com/static/img/logo.png"/>
+              <meta itemprop="height" content="203px"/>
+              <meta itemprop="width" content="203px"/>
+            </div>
+            <a itemprop="mainEntityOfPage" href="/societe/blog/digest-securite-septembre-2017/">
+              <meta itemprop="headline" content="Digest sécurité septembre 2017"/>
+              <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                <meta itemprop="name" content="Bearstech"/>
+                <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+                  <meta itemprop="url" content="https://bearstech.com/static/img/logo.png"/>
+                </div>
+              </div>
+              <meta itemprop="dateModified" content="2017-09-15"/>
+              <h3 class="title">Digest sécurité septembre 2017</h3>
+              <em>Les données personnelles 143 millions d&#39;américains compromises Equifax, une société...</em>
+              <p>
+                <small>Publié le <span itemprop="datePublished">2017-09-15, par </span>
+                  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">Olivier Laurelli</span>
+                    <meta itemprop="affiliation" content="Bearstech">
+                  </span>
+                </small>
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="column">
+          <div class='blog-post' itemprop="citation" itemscope itemtype="https://schema.org/Article">
+            <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="https://bearstech.com/static/img/logo.png"/>
+              <meta itemprop="height" content="203px"/>
+              <meta itemprop="width" content="203px"/>
+            </div>
+            <a itemprop="mainEntityOfPage" href="/societe/blog/digest-securite-juillet-2017/">
+              <meta itemprop="headline" content="Digest sécurité juillet 2017"/>
+              <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                <meta itemprop="name" content="Bearstech"/>
+                <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+                  <meta itemprop="url" content="https://bearstech.com/static/img/logo.png"/>
+                </div>
+              </div>
+              <meta itemprop="dateModified" content="2017-07-31"/>
+              <h3 class="title">Digest sécurité juillet 2017</h3>
+              <em>Suède : des données sensibles exposées dans le cloud La société des transports...</em>
+              <p>
+                <small>Publié le <span itemprop="datePublished">2017-07-31, par </span>
+                  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">Olivier Laurelli</span><meta itemprop="jobTitle" content="Expert sécurité">
+                    <meta itemprop="affiliation" content="Bearstech">
+                  </span>
+                </small>
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="column">
+          <div class='blog-post' itemprop="citation" itemscope itemtype="https://schema.org/Article">
+            <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+              <meta itemprop="url" content="https://bearstech.com/static/img/logo.png"/>
+              <meta itemprop="height" content="203px"/>
+              <meta itemprop="width" content="203px"/>
+            </div>
+            <a itemprop="mainEntityOfPage" href="/societe/blog/digest-securite-juin-2017/">
+              <meta itemprop="headline" content="Digest sécurité Juin 2017"/>
+              <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                <meta itemprop="name" content="Bearstech"/>
+                <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+                  <meta itemprop="url" content="https://bearstech.com/static/img/logo.png"/>
+                </div>
+              </div>
+              <meta itemprop="dateModified" content="2017-06-27"/>
+              <h3 class="title">Digest sécurité Juin 2017</h3>
+              <em>Kim&#39;s Ranswormware 1.0 Cette fois ça y est, la NSA a identifié (ou pas) les auteurs de...</em>
+              <p>
+                <small>Publié le <span itemprop="datePublished">2017-06-27, par </span>
+                  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">Olivier Laurelli</span><meta itemprop="jobTitle" content="Expert sécurité">
+                    <meta itemprop="affiliation" content="Bearstech">
+                  </span>
+                </small>
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <a class="button is-pulled-right" href="/societe/blog/">Lire notre blog</a>
+    </div>
+  </div>
+</section>
+<section id="le-references" class="section">
+  <div class="container">
+    <div class="columns has-stretch is_high_enough">
+      <div class="column is-flex has-vertical-center">
+        <div class="content">
+          <h2 class="title">Nos Références</h2>
+          <p>Découvrez ces entreprises qui font confiance à Bearstech et nos services d'hébergement et infogérance, Conseil Devops, Expertise Cloud et sécurité.</p>
+
+          <a class="button button-white" href="/societe/references/">Découvrir nos références</a>
+        </div>
+      </div>
+      <div class="column is-flex has-vertical-center">
+        <div class="columns logos is-mobile">
+          <div class="column losange"><a href="/societe/references/armor-lux/"><img src="/societe/references/armor-lux//logo.svg" alt='Armor Lux' /></a></div>
+          <div class="column losange"><a href="/societe/references/bnp-paribas/"><img src="/societe/references/bnp-paribas//logo.svg" alt='BNP Paribas' /></a></div>
+          <div class="column losange"><a href="/societe/references/devialet/"><img src="/societe/references/devialet//logo_devialet.png" alt='Devialet' /></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="le-expertise" class="section">
+  <div class="container">
+    <div class="content">
+      <h2 class="title">Notre expertise technique</h2>
+      <div class="list-techno-container">
+        <div class="list-techno-content">
+          <a href="/technologies-expertises/ansible/" class='techno-element'>Ansible</a>
+          <a href="/technologies-expertises/apache/" class='techno-element'>Apache</a>
+          <a href="/technologies-expertises/couchdb/" class='techno-element'>CouchDB</a>
+          <a href="/technologies-expertises/cuttlefish/" class='techno-element'>Cuttlefish</a>
+          <a href="/technologies-expertises/debian/" class='techno-element'>Debian</a>
+          <a href="/technologies-expertises/django/" class='techno-element'>Django</a>
+          <a href="/technologies-expertises/docker/" class='techno-element'>Docker</a>
+          <a href="/technologies-expertises/drupal/" class='techno-element'>Drupal</a>
+          <a href="/technologies-expertises/elasticsearch/" class='techno-element'>Elasticsearch</a>
+          <a href="/technologies-expertises/git/" class='techno-element'>Git</a>
+          <a href="/technologies-expertises/gitlab/" class='techno-element'>GitLab</a>
+          <a href="/technologies-expertises/haproxy/" class='techno-element'>Haproxy</a>
+          <a href="/technologies-expertises/memcached/" class='techno-element'>Memcached</a>
+          <a href="/technologies-expertises/mercurial/" class='techno-element'>Mercurial</a>
+          <a href="/technologies-expertises/modoboa/" class='techno-element'>Modoboa</a>
+          <a href="/technologies-expertises/mongodb/" class='techno-element'>MongoDB</a>
+          <a href="/technologies-expertises/mysql/" class='techno-element'>MySQL</a>
+          <a href="/technologies-expertises/nginx/" class='techno-element'>Nginx</a>
+          <a href="/technologies-expertises/postgresql/" class='techno-element'>PostgreSQL</a>
+          <a href="/technologies-expertises/pyramid/" class='techno-element'>Pyramid</a>
+          <a href="/technologies-expertises/redis/" class='techno-element'>Redis</a>
+          <a href="/technologies-expertises/redmine/" class='techno-element'>Redmine</a>
+          <a href="/technologies-expertises/solr/" class='techno-element'>Solr</a>
+          <a href="/technologies-expertises/svn/" class='techno-element'>SVN</a>
+          <a href="/technologies-expertises/symfony/" class='techno-element'>Symfony</a>
+          <a href="/technologies-expertises/trac/" class='techno-element'>TRAC</a>
+          <a href="/technologies-expertises/traefik/" class='techno-element'>Træfik</a>
+          <a href="/technologies-expertises/tsung/" class='techno-element'>Tsung</a>
+          <a href="/technologies-expertises/varnish/" class='techno-element'>Varnish</a>
+          <a href="/technologies-expertises/wordpress/" class='techno-element'>WordPress</a>
+          <a href="/technologies-expertises/xen/" class='techno-element'>Xen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero header_ecommerce is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title" style="color:white;">Nos services pour les sites de e-commerce</h2>
+      <p style="color:white;">La rentabilité des sites de e-commerce est directement liée aux performances des plates-formes web qui les propulsent. Le savoir-faire de Bearstech permet d’améliorer ces performances et très souvent de réduire leur coût d’exploitation dans le Cloud ou ailleurs.</p>
+      <a href="/nos-services-pour-les-site-de-e-commerce" class="button button-white has-margin-bottom">Découvrir nos solutions pour les sites de e-commerce </a>
+    </div>
+  </div>
+</section>
+<section class="section skills">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <h2 class="title">Devops</h2>
+          <p>Notre démarche Devops repose sur nos services de développement, architecture et conseil sur des technologies modernes et maîtrisées pour vos applications métier.</p>
+          <a class="button button-blue" href="/devops/">Nos Services Devops</a>
+        </div>
+      </div>
+      <div class="column">
+        <img class="illustration" alt="Devops Bearstech" src="/static/img/schema-devops.svg" />
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column order-2">
+        <div class="content">
+          <h2 class="title">Performance</h2>
+          <p>Des performances pour vos applications et services à la hauteur de vos ambitions, pour accompagner la croissance de vos projets.</p>
+          <a class="button button-blue" href="/performance/">Optimisez Vos Performances</a>
+        </div>
+      </div>
+      <div class="column order-1">
+        <img class="illustration" alt="Performance Web Bearstech" src="/static/img/schema-performance.svg" />
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <h2 class="title">Sécurité</h2>
+          <p>Sécurité des données, des communications et haute disponibilité pour la continuité de vos services et de votre business.</p>
+          <a class="button button-blue" href="/securite/">Renforcez Votre Sécurité</a>
+        </div>
+      </div>
+      <div class="column">
+        <img class="illustration" alt="Sécurité Web Bearstech" src="/static/img/schema-securite.svg" />
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column order-2">
+        <div class="content">
+          <h2 class="title">Expertise Cloud</h2>
+          <p>Votre architecture cloud maîtrisée, mise en place et pilotée par des spécialistes pour vous concentrer sur l’essentiel, la croissance de votre projet.</p>
+          <a class="button button-blue" href="/expertise-cloud/">Découvrez Nos Offres Cloud</a>
+        </div>
+      </div>
+      <div class="column order-1">
+        <img class="illustration" alt="Expertise Hébergement Cloud Bearstech" src="/static/img/schema-expertise-cloud.svg" />
+      </div>
+    </div>
+  </div>
+</section>
+<section id="le-twitter" class="section">
+  <div class="container is-clearfix">
+    <div class="content">
+      <img class="icon-twitter" alt="Twitter Bearstech" src="/static/img/icon-twitter.svg" />
+      <hr />
+    </div>
+  </div>
+  <div class="container twitter-container">
+    <beartweets inline-template>
+      <div class="columns">
+        <div class="column tweet is-one-third" v-for="tweet in tweets">
+          <span class="account"><strong>bearstech</strong> <a v-bind:href="tweet.url">@bearstech</a> ${humanDate(tweet.created_at)}</span>
+          <div class="has-word-break" v-html="tweet.html"></div>
+        </div>
+      </div>
+    </beartweets>
+  </div>
+</section>
+<section id="le-formation-conseil" class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column content is-flex">
+        <div class="illustration"><img alt="Formation" src="/static/img/icon-formation.svg" /></div>
+        <div>
+          <h2 class="title">Vous former</h2>
+          <p>Bearstech dispose d'une expertise sur des technologies modernes et vous propose des formations à ces outils pour doper votre système d'information.</p>
+
+          <a class="button" href="/devops/formations/">Catalogue Formation</a>
+        </div>
+      </div>
+      <div class="column content is-flex">
+        <div class="illustration"><img alt="Conseil" src="/static/img/icon-conseil.svg" /></div>
+        <div>
+          <h2 class="title">Vous conseiller</h2>
+          <p>Architecture système et réseaux, développement d'applications métiers, sécurité, optimisations et performances : Bearstech vous conseille.</p>
+
+          <a class="button" href="/nos-services-conseil/">Nos Prestations de Conseil</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      </div>
+      <footer id="le-footer" class="footer">
+        <div class="container">
+          <div class="content">
+          <img class="logo" alt="Bearstech" src="/static/img/logo-white.svg" />
+            <div class="columns">
+              <div class="column is-5">
+                <address>
+                  40 passage des panoramas<br>
+                  75 002 Paris
+                </address>
+                <p>Téléphone : +33 1 70 616 016<br>
+                  Email : contact@bearstech.com</p>
+                  <a href="/">Bearstech</a>
+                </div>
+                <div class="column">
+                  <ul class="is-unstyled footer-menu">
+                    <li><a href="/societe/#Partenaires">Partenaires</a></li>
+                    <li><a href="/sitemap.xml">Sitemap</a></li>
+                    <li><a href="/mentions-legales/">Mentions légales</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="is-unstyled footer-menu">
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/intervention-durgence/">Intervention d'urgence</a></li>
+                    <li><a href="https://support.bearstech.com/homepage/">Support</a></li>
+                    <li><a href="/configuration-hebergement/">Configuration Hébergement</a></li>
+                  </ul>
+                </div>
+              </div>
+              <p class="is-lead">Hébergement et Infogérance libre depuis 2004</p>
+              <a href="/devops">Devops | </a>
+              <a href="/performance">Performance | </a>
+              <a href="/securite">Sécurité | </a>
+              <a href="/expertise-cloud">Expertise Cloud | </a>
+              <a href="/societe">Société</a>
+              <hr />
+              <p class="is-highlighted">Copyright &copy; 2017 Bearstech</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="/static/bearstech.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://bearstech.com",
+      "legalName":"Bearstech",
+      "address": [{
+        "@type":"PostalAddress",
+        "addressLocality":"Paris",
+        "streetAddress":"40 passage des panoramas",
+        "postalCode":"75 002"
+      }],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+33 1 70 616 016",
+        "email":"contact@bearstech.com",
+        "contactType": "customer service"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type" : "WebSite",
+      "name" : "Bearstech | Hébergement & Infogérance, conseil DevOps",
+      "url" : "https://bearstech.com",
+      "publisher" :[{
+        "@type": "Organization",
+        "url": "https://bearstech.com",
+        "legalName":"Bearstech",
+        "address": [{
+          "@type":"PostalAddress",
+          "addressLocality":"Paris",
+          "streetAddress":"40 passage des panoramas",
+          "postalCode":"75 002"
+        }],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+33 1 70 616 016",
+          "email":"contact@bearstech.com",
+          "contactType": "customer service"
+        }]
+      }]
+    }
+    </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://bearstech.com/",
+        "name": "Page d'accueil",
+        "image": "https://bearstech.com/static/img/logo.png"
+      }
+    }]
+  }
+</script>
+  </body>
+  </html>
