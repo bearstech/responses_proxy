@@ -5,8 +5,8 @@ import responses
 
 class RequestsMock(responses.RequestsMock):
 
-    def __init__(self, document_root):
-        super().__init__(assert_all_requests_are_fired=False)
+    def __init__(self, document_root='tests/responses'):
+        super(RequestsMock, self).__init__(assert_all_requests_are_fired=False)
         for root, dirnames, filenames in os.walk(document_root):
             for filename in filenames:
                 if filename.endswith('.json'):

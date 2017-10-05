@@ -2,6 +2,22 @@
 responses proxy
 ===================
 
+responses_proxy allow you to easily mock HTTP responses in your tests
+
+Installation
+=============
+
+::
+
+    $ pip install responses_proxy
+
+Usage
+=====
+
+Check command line arguments::
+
+    $ responses-proxy -h
+
 First save some stuff using the proxy mode::
 
     $ responses-proxy --proxy
@@ -26,11 +42,11 @@ the same way without calling the real server.
 
 You can aslo use a `RequestsMock` in you unit tests::
 
-    from responses_proxy import RequestsMock
+    import responses_proxy
     import requsests
 
     def test_url():
-        with RequestsMock(document_root='/path/to/document_root'):
+        with responses_proxy.RequestsMock():
             requests.get('http://bearstech.com')
-            # https will work to
+            # https will work to. both are registered
             requests.get('https://bearstech.com')

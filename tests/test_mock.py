@@ -1,8 +1,8 @@
-from responses_proxy import RequestsMock
+import responses_proxy
 import requests
 
 
 def test_mock():
-    with RequestsMock(document_root='tests/document_root'):
+    with responses_proxy.RequestsMock():
         resp = requests.get('http://bearstech.com')
         assert resp.status_code == 200

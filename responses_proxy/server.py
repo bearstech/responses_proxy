@@ -10,7 +10,7 @@ import waitress
 def parse_args(args=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('--docroot', metavar='DIRNAME',
-                        default='document_root')
+                        default='tests/responses')
     parser.add_argument('--proxy', action='store_true', default=False)
     parser.add_argument('--use-ssl', action='store_true', default=False)
     parser.add_argument('--port', metavar='3333', type=int, default=3333)
@@ -82,7 +82,7 @@ class MockServer:
             data = json.load(fd)
         resp = webob.Response()
         resp.status_int = data['status']
-        resp.headers.update(data['headers'])
+        resp.headers.update({str(k): str(v) for k, v in data['headers']})
 
         with open(filename + '.body', 'rb') as fd:
             resp.body = fd.read()

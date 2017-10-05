@@ -11,11 +11,11 @@ def proxy(request):
     p = subprocess.Popen([
         sys.executable, '-m', 'responses_proxy.server',
         '--proxy', '--use-ssl',
-        '--docroot', 'tests/document_root',
+        '--docroot', 'tests/responses',
     ], stdout=sys.stdout, stderr=sys.stderr)
     os.environ['HTTP_PROXY'] = 'http://localhost:3333'
     # wait for server to start
-    time.sleep(.5)
+    time.sleep(1)
     yield p
     del os.environ['HTTP_PROXY']
     p.kill()
@@ -25,11 +25,11 @@ def proxy(request):
 def server(request):
     p = subprocess.Popen([
         sys.executable, '-m', 'responses_proxy.server',
-        '--docroot', 'tests/document_root',
+        '--docroot', 'tests/responses',
     ], stdout=sys.stdout, stderr=sys.stderr)
     os.environ['HTTP_PROXY'] = 'http://localhost:3333'
     # wait for server to start
-    time.sleep(.5)
+    time.sleep(1)
     yield p
     del os.environ['HTTP_PROXY']
     p.kill()
