@@ -1,4 +1,5 @@
 graft tests
 include *.rst *.cfg *.ini *.txt
+exclude pyenv.cfg
 global-exclude *.pyc
 global-exclude __pycache__
