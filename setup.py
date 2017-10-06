@@ -12,7 +12,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='responses_proxy',
-    version='0.1.1',
+    version='0.1.2.dev0',
     description='allow you to easily mock HTTP responses in your tests',
     long_description=long_description,
     url='https://github.com/bearstech/responses_proxy',
