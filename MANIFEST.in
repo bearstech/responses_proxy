@@ -1,0 +1,4 @@
+graft tests
+include *.rst *.cfg *.ini *.txt
+global-exclude *.pyc
+global-exclude __pycache__
