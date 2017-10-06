@@ -13,9 +13,9 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='responses_proxy',
     version='0.1.1.dev0',
-    description='requests proxy',
+    description='allow you to easily mock HTTP responses in your tests',
     long_description=long_description,
-    url='https://gitlab.bearstech.com/factory/responses_proxy',
+    url='https://github.com/bearstech/responses_proxy',
     classifiers=[
         # How mature is this project? Common values are
         #   3 - Alpha
