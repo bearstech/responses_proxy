@@ -12,7 +12,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='responses_proxy',
-    version='0.1.0',
+    version='0.1.1.dev0',
     description='requests proxy',
     long_description=long_description,
     url='https://gitlab.bearstech.com/factory/responses_proxy',
