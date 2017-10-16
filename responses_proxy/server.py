@@ -13,8 +13,7 @@ def parse_args(args=None):
                         default='tests/responses')
     parser.add_argument('--proxy', action='store_true', default=False)
     parser.add_argument('--use-ssl', action='store_true', default=False)
-    parser.add_argument('--host', metavar='HOST', type=int,
-                        default='localhost')
+    parser.add_argument('--host', metavar='HOST', default='localhost')
     parser.add_argument('--port', metavar='3333', type=int, default=3333)
     parser.add_argument('--debug', action='store_true', default=False)
     return parser.parse_args(args)
