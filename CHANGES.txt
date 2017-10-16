@@ -1,8 +1,9 @@
 0.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Allow to bind on 0.0.0.0
 
+- Provide a docker image at bearstech/responses_proxy:latest
 
 0.1.1 (2017-10-06)
 ------------------
