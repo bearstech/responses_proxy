@@ -1,5 +1,5 @@
 graft tests
-include *.rst *.cfg *.ini *.txt Dockerfile
+include *.rst *.cfg *.ini *.txt Dockerfile .dockerignore
 exclude pyenv.cfg
 global-exclude *.pyc
 global-exclude __pycache__

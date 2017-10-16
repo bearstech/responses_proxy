@@ -1,7 +1,9 @@
 FROM python:3-alpine
 
-RUN pip install responses_proxy==0.1.3 && rm -Rf /root/.cache
+COPY . /responses_proxy
+
+RUN cd /responses_proxy && pip install . && rm -Rf /responses_proxy /root/.cache
 
 VOLUME /tests/responses
 
-CMD ["responses-proxy", "--host", "0.0.0.0"]
+ENTRYPOINT ["responses-proxy"]

@@ -1,0 +1,12 @@
+*.pyc
+*.swp
+*/json
+*.egg-info
+.tox/
+.git/
+bin/
+include/
+lib/
+lib64/
+.cache/
+tests/

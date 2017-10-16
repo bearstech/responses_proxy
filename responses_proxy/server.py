@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import argparse
 
@@ -7,15 +8,31 @@ import requests
 import waitress
 
 
+def default_from_env(key, default):
+    value = os.getenv('RESPONSES_PROXY_' + key.replace('-', '_').upper())
+    if not value:
+        return default
+    if isinstance(default, bool):
+        return True
+    elif isinstance(default, int):
+        return int(value)
+    return value
+
+
 def parse_args(args=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('--docroot', metavar='DIRNAME',
-                        default='tests/responses')
-    parser.add_argument('--proxy', action='store_true', default=False)
-    parser.add_argument('--use-ssl', action='store_true', default=False)
-    parser.add_argument('--host', metavar='HOST', default='localhost')
-    parser.add_argument('--port', metavar='3333', type=int, default=3333)
-    parser.add_argument('--debug', action='store_true', default=False)
+                        default=default_from_env('docroot', 'tests/responses'))
+    parser.add_argument('--proxy', action='store_true',
+                        default=default_from_env('proxy', False))
+    parser.add_argument('--use-ssl', action='store_true',
+                        default=default_from_env('use_ssl', False))
+    parser.add_argument('--host', metavar='HOST',
+                        default=default_from_env('host', '0.0.0.0'))
+    parser.add_argument('--port', metavar='3333', type=int,
+                        default=default_from_env('port', 3333))
+    parser.add_argument('--debug', action='store_true',
+                        default=default_from_env('debug', False))
     return parser.parse_args(args)
 
 
@@ -91,12 +108,20 @@ class MockServer:
         if self.args.debug:
             print(resp)
             print('---\n\n')
+
+        sys.stdout.flush()
+
         return resp(environ, start_response)
 
 
 def main():
     args = parse_args()
     app = MockServer(args)
+    print((
+        'Starting server on http://{0.host}:{0.port} '
+        'with options {0}'
+        ).format(args))
+    sys.stdout.flush()
     waitress.serve(app, host=args.host, port=args.port)
 
 

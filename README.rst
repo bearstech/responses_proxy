@@ -10,9 +10,13 @@ responses_proxy allow you to easily mock HTTP responses in your tests
 Installation
 =============
 
-::
+With pip::
 
     $ pip install responses_proxy
+
+Using docker::
+
+    $ docker run --rm bearstech/responses_proxy -h
 
 Usage
 =====
@@ -39,6 +43,10 @@ Then run some code to make some requests::
     python -c "import requests; requests.get('http://bearstech.com')"
 
 This will generate some file in `tests/responses/`
+
+NB: With docker you'll have to mount the volume::
+
+    $ docker run --rm -v tests/responses:/tests/responses bearstech/responses_proxy
 
 You can now restart the server without the proxy mode and the client will react
 the same way without calling the real server.
