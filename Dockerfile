@@ -1,6 +1,6 @@
-FROM python:3
+FROM python:3-alpine
 
-RUN pip install responses_proxy
+RUN pip install responses_proxy && rm -Rf /root/.cache
 
 VOLUME /tests/responses
 
