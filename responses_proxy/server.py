@@ -16,6 +16,8 @@ def default_from_env(key, default):
         return True
     elif isinstance(default, int):
         return int(value)
+    elif isinstance(default, list):
+        return value.split(':')
     return value
 
 
@@ -27,6 +29,8 @@ def parse_args(args=None):
                         default=default_from_env('proxy', False))
     parser.add_argument('--use-ssl', action='store_true',
                         default=default_from_env('use_ssl', False))
+    parser.add_argument('--ssl-domain', action='append',
+                        default=default_from_env('ssl_domains', []))
     parser.add_argument('--host', metavar='HOST',
                         default=default_from_env('host', '0.0.0.0'))
     parser.add_argument('--port', metavar='3333', type=int,
@@ -58,16 +62,20 @@ class MockServer:
         filename = os.path.join(
             self.args.docroot,
             req.host,
-            ''.join([c if c not in '?&-=,' else '_'
-                    for c in full_path.lstrip('/')]),
+            ''.join([c if c not in '[]{}()!?&-=,%' else '_'
+                     for c in full_path[:250].lstrip('/')]),
             '__{}__'.format(req.method))
         scheme = 'https://' if self.args.use_ssl else 'http://'
+        if req.host in self.args.ssl_domain:
+            scheme = 'https://'
         url = scheme + req.host + full_path
         if self.args.debug:
             print(url)
             print('---')
             print(req)
             print('---')
+        else:
+            print("{0} {1}".format(req.method, url))
         if self.args.proxy:
             resp = requests.request(
                 req.method.upper(),
@@ -98,6 +106,7 @@ class MockServer:
 
         with open(filename + '.json') as fd:
             data = json.load(fd)
+
         resp = webob.Response()
         resp.status_int = data['status']
         resp.headers.update({str(k): str(v) for k, v in data['headers']})
