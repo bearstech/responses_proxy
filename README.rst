@@ -16,7 +16,7 @@ With pip::
 
 Using docker::
 
-    $ docker run --rm bearstech/responses_proxy -h
+    $ docker run --rm -v tests/responses:/tests/responses bearstech/responses_proxy -h
 
 Usage
 =====
