@@ -6,6 +6,10 @@ import argparse
 import webob
 import requests
 import waitress
+import urllib3
+
+# ssl warnings are useless for testing
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def default_from_env(key, default):
@@ -99,6 +103,7 @@ class MockServer:
                 headers={k: v for k, v in req.headers.items()
                          if k not in self.exclude_request_headers},
                 allow_redirects=False,
+                verify=False,
             )
             if self.args.debug:
                 print(resp)
