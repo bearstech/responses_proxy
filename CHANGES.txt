@@ -1,7 +1,7 @@
 0.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- allow to run test with proxy by disabling responses when HHTP_PROXY is set
 
 
 0.1.3 (2017-10-16)
